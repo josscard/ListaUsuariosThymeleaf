@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla :: head">
+        <title>Datos de la Persona</title>
+        <meta charset="UTF-8">
+    </head>
+    
+    <header th:replace="layout/plantilla :: header"></header>
+    <section th:replace="layout/editarCliente :: editarCliente"></section>
+    <footer th:replace="layout/plantilla :: footer"></footer>
+    
+  <!-- 
+    <h2>[[#{persona.formulario}]]</h2>
+    <a th:href="@{/}">[[#{accion.regresar}]]</a>
+    <br/>
+    <br/>
+    <body>
+        <form th:action="@{/guardar}" method="post" th:object="${persona}">
+            <input type="hidden" name="idPersona" th:field="*{idPersona}"/>
+
+            <label for="nombre">[[#{persona.nombre}]]:</label>
+            <input type="text" name="nombre" th:field="*{nombre}">
+            <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">Error Nombre</span>
+
+            <br/>
+
+            <label for="apellido">[[#{persona.apellido}]]:</label>
+            <input type="text" name="apellido" th:field="*{apellido}">
+            <span th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}">Error Apellido</span>
+
+            <br/>
+
+            <label for="email">[[#{persona.email}]]:</label>
+            <input type="text" name="email" th:field="*{email}">
+            <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Error Email</span>
+
+            <br/>
+
+            <label for="telefono">[[#{persona.telefono}]]:</label>
+            <input type="tel" name="telefono" th:field="*{telefono}">
+            <span th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}">Error Telefono</span>
+
+            <br/>
+
+            <label for="ciudad">[[#{persona.ciudad}]]:</label>
+            <input type="text" name="ciudad" th:field="*{ciudad}">
+            <span th:if="${#fields.hasErrors('ciudad')}" th:errors="*{ciudad}">Error Ciudad</span>
+
+            <br/>   
+            <input type="submit" name="guardar" th:value="#{accion.guardar}"/>
+        </form>
+       
+       -->
+
+        
+    </body>
+
+</html>

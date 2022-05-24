@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla :: head">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"></header>
+        <section th:replace="layout/botonesAgregar :: botonesAgregar"></section>
+       <section th:replace="layout/agregarCliente :: agregarCliente"></section>
+        <section th:replace="layout/listadoClientes :: listadoClientes"></section>
+        
+        <footer th:replace="layout/plantilla :: footer" class="position-absolute bottom-0 start-50 translate-middle-x"></footer>
+
+    <!--    <h2>[[#{persona.formulario}]]</h2>-->
+
+        <!-- EL siguiente codigo extrae desde messages.property -->
+        <!-- comment 
+        <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/agregar}" >[[#{persona.crear}]]</a>
+        <br
+            <div th:if="${personas != null and !personas.empty}">
+        <table border="2px">
+            <tr>
+                <th>ID</th>
+                <th>[[#{persona.nombre}]]</th>
+                <th>[[#{persona.apellido}]]</th>
+                <th>[[#{persona.email}]]</th>
+                <th>[[#{persona.telefono}]]</th>
+                <th>[[#{persona.ciudad}]]</th>
+                <th sec:authorize="hasRole('ROLE_ADMIN')">[[#{accion.editar}]]</th>
+                <th sec:authorize="hasRole('ROLE_ADMIN')">[[#{accion.eliminar}]]</th>
+
+            </tr>
+            <tr th:each="persona : ${personas}">
+                <td th:text="${persona.idPersona}">Mostrar ID</td>
+                <td th:text="${persona.nombre}">Mostrar Nombre</td>
+                <td th:text="${persona.apellido}">Mostrar Apellido</td>
+                <td th:text="${persona.email}">Mostrar Email</td>
+                <td th:text="${persona.telefono}">Mostrar Telefono</td>
+                <td th:text="${persona.ciudad}">Mostrar Ciudad</td>
+                <td sec:authorize="hasRole('ROLE_ADMIN')"> <a th:href="@{/editar/} +${persona.idPersona}"/>[[#{accion.editar}]]</td>
+                <td sec:authorize="hasRole('ROLE_ADMIN')"> <a th:href="@{/eliminar/} +${persona.idPersona}"/>[[#{accion.eliminar}]]</td>
+
+
+            </tr>
+        </table>    
+    </div>-->
+    <div th:if="${personas == null or personas.empty}">
+        <table border="2">
+            <tr>
+                <th >[[#{persona.lista-vacia}]]</th>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+</body>
+</html>

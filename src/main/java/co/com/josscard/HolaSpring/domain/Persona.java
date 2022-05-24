@@ -38,4 +38,8 @@ public class Persona implements Serializable{
     
     @NotNull
     private double saldo;
+    
+    private int num;
+    
+    
 }
